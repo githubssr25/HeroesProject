@@ -14,6 +14,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<JusticeAvengersDBContext>(options =>
     options.UseNpgsql(builder.Configuration["JusticeAvengersDbConnectionString"]));
 
+//
+// This line configures your application to use Entity Framework Core with a PostgreSQL database by:
+
+// Registering the Database Context (JusticeAvengersDBContext) as a service in the application's dependency injection (DI) container.
+// Specifying PostgreSQL as the database provider using the .UseNpgsql method.
+// Providing the connection string required to connect to the database.
+
+
+
+
 
 var app = builder.Build();
 
